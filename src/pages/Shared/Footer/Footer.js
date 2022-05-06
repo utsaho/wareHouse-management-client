@@ -1,10 +1,10 @@
 import React from 'react';
 import './Footer.css';
-import facebook from '../../Images/logo/facebook-logopng.png';
-import twitter from '../../Images/logo/twitterpng.png';
-import instagram from '../../Images/logo/instagrampng.png';
-import linkdin from '../../Images/logo/linkdinpng.png';
-import github from '../../Images/logo/github.png';
+import facebook from '../../../Images/logo/facebook-logopng.png';
+import twitter from '../../../Images/logo/twitterpng.png';
+import instagram from '../../../Images/logo/instagrampng.png';
+import linkdin from '../../../Images/logo/linkdinpng.png';
+import github from '../../../Images/logo/github.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faMailBulk, faPhone, faFax } from '@fortawesome/free-solid-svg-icons';
