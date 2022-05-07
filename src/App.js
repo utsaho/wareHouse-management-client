@@ -8,6 +8,9 @@ import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-toastify';
+import ManageItems from './pages/ManageItems/ManageItems';
+import AddItems from './pages/AddItems/AddItems';
+import MyItems from './pages/MyItems/MyItems';
 
 function App() {
     return (
@@ -20,6 +23,21 @@ function App() {
                     <Route path='/blogs' element={
                         <RequireAuth>
                             <Blogs></Blogs>
+                        </RequireAuth>
+                    } />
+                    <Route path='/manage-items' element={
+                        <RequireAuth>
+                            <ManageItems></ManageItems>
+                        </RequireAuth>
+                    } />
+                    <Route path='/add-items' element={
+                        <RequireAuth>
+                            <AddItems></AddItems>
+                        </RequireAuth>
+                    } />
+                    <Route path='/my-items' element={
+                        <RequireAuth>
+                            <MyItems></MyItems>
                         </RequireAuth>
                     } />
                     <Route path='/login' element={<Login></Login>} />
