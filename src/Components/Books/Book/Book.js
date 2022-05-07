@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Book.css';
 const Book = ({ book }) => {
-    const { name, img, description, price, quantity, supplierName } = book;
+    const { _id, name, img, description, price, quantity, supplierName } = book;
+    const navigate = useNavigate();
     return (
         <div className='container d-flex book bg-white shadow-lg p-3 mb-5 bg-body'>
             <div className='h-100 w-25'>
@@ -14,7 +16,7 @@ const Book = ({ book }) => {
                 <p className='my-0'> <span className='text-muted fw-bold'>Quantity: </span> {quantity}</p>
                 <div className='d-flex justify-content-between update-button'>
                     <p className='my-0'> <span className='text-muted fw-bold'>Supplier: </span> {supplierName}</p>
-                    <button className='btn text-light fw-bold mb-2'>Update</button>
+                    <button className='btn text-light fw-bold mb-2' onClick={() => navigate(`/inventory/${_id}`)} >Update</button>
                 </div>
             </div>
         </div>

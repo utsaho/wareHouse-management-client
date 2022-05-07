@@ -159,7 +159,10 @@ const Home = () => {
 
     return (
         <div className=' pt-5'>
-            <Books></Books>
+            <p className='text-center fs-2'>Bangla Books</p>
+            <hr className='conatiner mx-5' />
+
+            <Books number={6}></Books>
         </div>
     );
 };
