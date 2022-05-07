@@ -1,4 +1,4 @@
-import useBooks from '../../pages/hooks/useBooks';
+import useBooks from '../../hooks/useBooks';
 import Book from './Book/Book';
 import './Books.css';
 const Books = ({ number }) => {

@@ -1,0 +1,22 @@
+.add-items {
+    background: linear-gradient(to right, rgb(254, 123, 154), rgb(152, 237, 225));
+    height: 500px;
+}
+
+.add-items .mx-auto {
+    width: 400px;
+    border-radius: 25px;
+}
+
+.add-items>.mx-auto h2 {
+    color: blueviolet;
+}
+
+.add-items>.mx-auto .btn {
+    background: linear-gradient(to right, rgb(68, 103, 249), rgb(170, 32, 254));
+    font-family: monospace;
+}
+
+.add-items>.mx-auto .btn:hover {
+    background: linear-gradient(to right, rgb(170, 32, 254), rgb(68, 103, 249));
+}
