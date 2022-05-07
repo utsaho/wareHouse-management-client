@@ -1,0 +1,20 @@
+.register-form {
+    background: linear-gradient(to right, rgb(255, 84, 143), rgb(255, 211, 156));
+    height: 450px;
+}
+
+.register-form .d-flex {
+    width: 500px;
+    height: 450px;
+}
+
+.form {
+    border-radius: 20px;
+    height: 350px;
+    width: 500px;
+}
+
+.form>form .btn {
+    border-radius: 10px;
+    background-color: rgb(72, 150, 255)
+}

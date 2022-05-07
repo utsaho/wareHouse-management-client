@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useAuthState, useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import auth from '../../../../firebase.init';
-import google from '../../../../Images/socialIcon/googlepng.png';
-import github from '../../../../Images/socialIcon/github.png';
-import facebook from '../../../../Images/socialIcon/facebook.png';
-import Loading from '../../../Shared/Loading/Loading';
-import { Navigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import google from '../../../Images/socialIcon/googlepng.png';
+import github from '../../../Images/socialIcon/github.png';
+import facebook from '../../../Images/socialIcon/facebook.png';
+import Loading from '../../Shared/Loading/Loading';
+import { useLocation, useNavigate } from 'react-router-dom';
 const SocialLogin = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
@@ -13,14 +13,17 @@ const SocialLogin = () => {
     const [user, loaging, authError] = useAuthState(auth);
     const [error, setError] = useState('');
 
+    // Getting previous location for redirecting
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    const navigate = useNavigate();
     if (googleLoading || githubLoading || facebookLoading || loaging) {
         return <Loading></Loading>
     }
 
-    // ! navigation test
-
     if (user) {
-        return <Navigate to='/home' />
+        // Navigating to location
+        navigate(from, { replace: true });
     }
 
     return (

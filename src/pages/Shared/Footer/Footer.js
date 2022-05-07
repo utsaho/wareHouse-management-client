@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faMailBulk, faPhone, faFax } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
     return (
-        <div className='position-relative bottom-0 end-0 w-100 footer rounded'>
+        <div className='position-relative bottom-0 end-0 w-100 footer rounded mt-5'>
             <footer className='w-full'>
 
                 {/* Social media */}
