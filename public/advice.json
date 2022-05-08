@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 1,
+        "name": "George R.R. Martin",
+        "img": "https://m.media-amazon.com/images/I/51O-RkSpkcL.jpg",
+        "talk": "A reader lives a thousand lives before he dies...The man who never reads lives only one.There is more treasure in books than in all the pirate’s loot on Treasure Island."
+    },
+    {
+        "_id": 2,
+        "name": "John Smith",
+        "img": "https://www.menshairstylestoday.com/wp-content/uploads/2016/09/Gentlemens-Haircut.jpg",
+        "talk": "I find television very educating. Every time somebody turns on the set, I go into the other room and read a book.You can never get a cup of tea large enough or a book long enough to suit me."
+    },
+    {
+        "_id": 3,
+        "name": "Ray Bradbury",
+        "img": "https://cdn1.photostockeditor.com/t/2411/man-wearing-green-hat-during-daytime-human-people.jpg",
+        "talk": "So please, oh please, we beg, we pray, go throw your TV set away, and in its place you can install a lovely bookshelf on the wall. Let’s be reasonable and add an eighth day to the week that is devoted exclusively to reading."
+    }
+]

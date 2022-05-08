@@ -1,0 +1,27 @@
+.advice-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.advice {
+    background: linear-gradient(to right, red, black);
+}
+
+@media only screen and (min-width: 992px) {
+    .advice-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .advice-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .advice-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

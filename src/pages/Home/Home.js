@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Advice from '../../Components/Advice/Advice';
 import Books from '../../Components/Books/Books';
+import Contact from '../../Components/Contact/Contact';
 const Home = () => {
     const size = 6;
     const [books, setBooks] = useState([]);
@@ -16,6 +18,8 @@ const Home = () => {
             <div className='manage-inventory d-flex justify-content-center'>
                 <button onClick={() => navigate('/manage-items', { replace: true })} className='btn text-white fs-5'>Manage Inventories</button>
             </div>
+            <Contact></Contact>
+            <Advice></Advice>
         </div>
     );
 };
