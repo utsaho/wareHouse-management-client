@@ -49,7 +49,7 @@ function App() {
                     <Route path='/login' element={<Login></Login>} />
                     <Route path='/register' element={<Register></Register>} />
                 </Routes>
-                {/* <Footer></Footer> */}
+                <Footer></Footer>
             </div>
             <ToastContainer
                 position="bottom-right"

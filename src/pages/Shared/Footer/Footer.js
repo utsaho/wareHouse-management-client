@@ -41,7 +41,7 @@ const Footer = () => {
                                 style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
                             <h2 className='text-warning'>FavBook.com</h2>
                         </div>
-                        <div className='col-md-3 col-lg-3 col-xl-3 col-sm-6 mx-auto mb-4'>
+                        {/* <div className='col-md-3 col-lg-3 col-xl-3 col-sm-6 mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold'>products</h6>
                             <hr className="mb-4 mt-0 d-inline-block mx-auto"
                                 style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
@@ -51,16 +51,16 @@ const Footer = () => {
                                 <Link className='text-white text-decoration-none' to='/'>mello</Link>
                                 <Link className='text-white text-decoration-none' to='/'>kello</Link>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='col-md-3 col-lg-3 col-xl-3 col-sm-6 mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold'>useful links</h6>
                             <hr className="mb-4 mt-0 d-inline-block mx-auto"
                                 style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
                             <div className='d-flex flex-column'>
-                                <Link className='text-white text-decoration-none' to='/'>hello</Link>
-                                <Link className='text-white text-decoration-none' to='/'>bello</Link>
-                                <Link className='text-white text-decoration-none' to='/'>mello</Link>
-                                <Link className='text-white text-decoration-none' to='/'>kello</Link>
+                                <Link className='text-white text-decoration-none' to='/manage-items'>Manage Inventories</Link>
+                                <Link className='text-white text-decoration-none' to='/my-items'>My Items</Link>
+                                <Link className='text-white text-decoration-none' to='/add-items'>Add Items</Link>
+                                <Link className='text-white text-decoration-none' to='/blogs'>Blog</Link>
                             </div>
                         </div>
 

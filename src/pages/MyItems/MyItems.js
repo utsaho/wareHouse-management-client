@@ -61,7 +61,7 @@ const MyItems = () => {
             <Books books={books} deleteBook={deleteBook} del={true} />
             <div className='d-flex justify-content-center'>
                 {
-                    [...Array(pages).keys()].map(page => <button onClick={() => setCurrentPage(page)} className={`btn ${page === currentPage ? 'selected' : ''} mx-1 fw-bold`} key={page}>{page}</button>)
+                    [...Array(pages).keys()].map(page => <button onClick={() => setCurrentPage(page)} className={`btn ${page === currentPage ? 'selected' : ''} mx-1 fw-bold`} key={page}>{page + 1}</button>)
                 }
                 <select defaultValue={defaultValue} onChange={(event) => setSize(event.target.value)}>
                     <option value="5">5</option>

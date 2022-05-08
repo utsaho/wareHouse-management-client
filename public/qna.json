@@ -1,0 +1,17 @@
+[
+    {
+        "_id": 1,
+        "question": "Deference between Node.js vs JavaScript",
+        "ans": "JavaScript and its surrounding environments like Node js for web development have seen a great acceleration in recent years. Giants in the industry like eBay, Uber, Netflix are preferring Node js for web development of applications. JavaScript is a simple programming language that runs on any of the browser’s JavaScript engines. On the contrary, Node js is a Javascript runtime environment, which is based on Google’s V8 JavaScript environment. It is used in executing Javascript codes outside the browsers.JavaScript can be run on any browser engine like Spider monkey for Firefox, JavaScript Core for Safari & V8 for Google Chrome. There is no browser specific limitations with JavaScript. However, Node JS can be run only on V8 of Google Chrome. Any programs using Node JS will need to be run on V8 engines only."
+    },
+    {
+        "_id": 2,
+        "question": "When should you use nodejs and when should you use mongodb?",
+        "ans": "Node.js also works well for apps expecting a huge traffic load that processes large numbers of requests on the client-side. It can simultaneously handle multiple requests and provide prompt responses. On the other hand, MongoDB NoSQL databases are cheaper and easier to maintain. NoSQL databases have features like easier data distribution, simpler data models, and automatic repair. These benefits require less administrative costs and, consequently, are less expensive. It’s open-source and incurs fewer server costs. Open-source is free. NoSQL databases use cheaper servers, so the price of data storage and processing per gig is significantly lower."
+    },
+    {
+        "_id": 3,
+        "question": "Differences between sql and nosql databases?",
+        "ans": "SQL is a language used to communicate with databases for storage, deletion, updation, insertion and retrieval of data. on the other hand, A software to retrieve, store and manage scalability of databases. SQL databases support Structured Query Languages. NonSQL does not have any declarative query language."
+    }
+]
