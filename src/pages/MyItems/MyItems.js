@@ -17,18 +17,18 @@ const MyItems = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [size, setSize] = useState(5);
     useEffect(() => {
-        fetch(`http://localhost:5000/books?size=${size}&page=${currentPage}&email=${email}`).then(res => res.json()).then(data => setBooks(data));
+        fetch(`https://pacific-taiga-30587.herokuapp.com/books?size=${size}&page=${currentPage}&email=${email}`).then(res => res.json()).then(data => setBooks(data));
     }, [size, currentPage, totalBooks]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/totalBooks?email=${email}`).then(res => res.json()).then(data => {
+        fetch(`https://pacific-taiga-30587.herokuapp.com/totalBooks?email=${email}`).then(res => res.json()).then(data => {
             setTotalBooks(data);
         });
         setPages(Math.ceil(totalBooks / size));
     }, [size, totalBooks]);
 
     const deleTe = (id) => {
-        fetch(`http://localhost:5000/book/${id}`, {
+        fetch(`https://pacific-taiga-30587.herokuapp.com/book/${id}`, {
             method: 'DELETE',
         }).then(res => res.json()).then(data => {
             if (data.deletedCount > 0) {

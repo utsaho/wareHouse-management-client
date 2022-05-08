@@ -8,7 +8,7 @@ const Home = () => {
     const size = 6;
     const [books, setBooks] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/books?size=${size}`).then(res => res.json()).then(data => setBooks(data));
+        fetch(`https://pacific-taiga-30587.herokuapp.com/books?size=${size}`).then(res => res.json()).then(data => setBooks(data));
     }, []);
     const navigate = useNavigate();
     return (

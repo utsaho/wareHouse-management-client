@@ -4,7 +4,7 @@ import './Advice.css';
 const Advice = () => {
     const [advice, setAdvice] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/advice').then(res => res.json()).then(data => setAdvice(data));
+        fetch('https://pacific-taiga-30587.herokuapp.com/advice').then(res => res.json()).then(data => setAdvice(data));
     }, []);
 
     return (

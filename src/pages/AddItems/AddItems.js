@@ -15,7 +15,7 @@ const AddItems = () => {
     const formSubmit = (book) => {
         const { email } = user;
         book.email = email;
-        axios.post('http://localhost:5000/additems', book).then(res => {
+        axios.post('https://pacific-taiga-30587.herokuapp.com/additems', book).then(res => {
             const { data } = res;
             if (data.insertedId) {
                 toast.success(`${book.name} added Successfully.`, {

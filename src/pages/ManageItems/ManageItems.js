@@ -44,15 +44,15 @@ const ManageItems = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/books?size=${size}&page=${currentPage}`).then(res => res.json()).then(data => setBooks(data));
+        fetch(`https://pacific-taiga-30587.herokuapp.com/books?size=${size}&page=${currentPage}`).then(res => res.json()).then(data => setBooks(data));
     }, [size, currentPage, totalBooks]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/totalBooks').then(res => res.json()).then(data => setTotalBooks(data));
+        fetch('https://pacific-taiga-30587.herokuapp.com/totalBooks').then(res => res.json()).then(data => setTotalBooks(data));
         setPages(Math.ceil(totalBooks / size));
     }, [size, totalBooks]);
     const deleTe = (id) => {
-        fetch(`http://localhost:5000/book/${id}`, {
+        fetch(`https://pacific-taiga-30587.herokuapp.com/book/${id}`, {
             method: 'DELETE',
         }).then(res => res.json()).then(data => {
             if (data.deletedCount > 0) {

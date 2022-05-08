@@ -4,7 +4,7 @@ import Qna from './Qna/Qna';
 const Blogs = () => {
     const [qna, setQna] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/qna').then(res => res.json()).then(data => setQna(data))
+        fetch('https://pacific-taiga-30587.herokuapp.com/qna').then(res => res.json()).then(data => setQna(data))
     }, []);
 
     return (

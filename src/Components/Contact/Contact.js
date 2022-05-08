@@ -6,7 +6,7 @@ import './Contact.css';
 const Contact = (event) => {
     const { register, handleSubmit, reset } = useForm();
     const formSubmit = (data) => {
-        axios.post('http://localhost:5000/request', data).then(res => {
+        axios.post('https://pacific-taiga-30587.herokuapp.com/request', data).then(res => {
             const { data } = res;
             if (data.insertedId) {
                 toast.success('Your request on process');

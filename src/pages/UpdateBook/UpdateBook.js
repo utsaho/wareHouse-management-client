@@ -8,14 +8,14 @@ const UpdateBook = () => {
     const [book, setBook] = useState({});
     const navigate = useNavigate();
     useEffect(() => {
-        fetch(`http://localhost:5000/book/${id}`).then(res => res.json()).then(data => setBook(data));
+        fetch(`https://pacific-taiga-30587.herokuapp.com/book/${id}`).then(res => res.json()).then(data => setBook(data));
         console.log('called')
     }, [book.quantity]);
 
     const delivered = () => {
         book.quantity = book.quantity - 1;
         console.log(book);
-        fetch(`http://localhost:5000/book/${id}`, {
+        fetch(`https://pacific-taiga-30587.herokuapp.com/book/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

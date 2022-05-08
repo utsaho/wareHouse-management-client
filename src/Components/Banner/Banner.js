@@ -6,7 +6,7 @@ const Banner = () => {
     const [banner, setBanner] = useState([]);
     useEffect(() => {
         const run = async () => {
-            await fetch('http://localhost:5000/banner').then(res => res.json()).then(data => setBanner(data));
+            await fetch('https://pacific-taiga-30587.herokuapp.com/banner').then(res => res.json()).then(data => setBanner(data));
         }
         run();
     }, []);
