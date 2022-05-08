@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './UpdateBook.css';
 const UpdateBook = () => {
     const { id } = useParams();
@@ -30,6 +31,17 @@ const UpdateBook = () => {
         const quantity = event.target.quantity.value;
         book.quantity = book.quantity + parseInt(quantity) + 1;
         delivered();
+        toast.success(`${book.name} added Successfully.`, {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark"
+
+        });
         event.target.quantity.value = '';
     }
 

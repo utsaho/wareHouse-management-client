@@ -2,8 +2,14 @@
     border-radius: 20px;
 }
 
-.update-button button {
+.update-button .update {
     background: linear-gradient(to right, rgb(21, 189, 175), rgb(43, 151, 238));
+    border: 0;
+    border-radius: 8px;
+}
+
+.update-button .delete-button {
+    background: linear-gradient(to right, rgb(21, 189, 99), rgb(45, 169, 159));
     border: 0;
     border-radius: 8px;
 }

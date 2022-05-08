@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Books from '../../Components/Books/Books';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
+import './MyItems.css';
 const MyItems = () => {
     const defaultValue = 5;
     const [user] = useAuthState(auth);
@@ -15,7 +17,7 @@ const MyItems = () => {
     const [size, setSize] = useState(5);
     useEffect(() => {
         fetch(`http://localhost:5000/books?size=${size}&page=${currentPage}&email=${email}`).then(res => res.json()).then(data => setBooks(data));
-    }, [size, currentPage]);
+    }, [size, currentPage, totalBooks]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/totalBooks?email=${email}`).then(res => res.json()).then(data => {
@@ -24,9 +26,23 @@ const MyItems = () => {
         setPages(Math.ceil(totalBooks / size));
     }, [size, totalBooks]);
 
+    const deleteBook = (id) => {
+        fetch(`http://localhost:5000/book/${id}`, {
+            method: 'DELETE',
+        }).then(res => res.json()).then(data => {
+            if (data.deletedCount > 0) {
+                const rem = books.filter(book => book._id !== id);
+                setBooks(rem);
+                setTotalBooks(totalBooks - 1);
+                setCurrentPage(0);
+                toast.success('Deleted Successfully');
+            }
+        })
+    }
+
     return (
-        <div className='mt-5'>
-            <Books books={books} />
+        <div className='mt-5 my-items'>
+            <Books books={books} deleteBook={deleteBook} del={true} />
             <div className='d-flex justify-content-center'>
                 {
                     [...Array(pages).keys()].map(page => <button onClick={() => setCurrentPage(page)} className={`btn ${page === currentPage ? 'selected' : ''} mx-1 fw-bold`} key={page}>{page}</button>)
