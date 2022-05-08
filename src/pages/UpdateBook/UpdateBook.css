@@ -1,0 +1,26 @@
+.update-book .img-container {
+    width: 250px;
+}
+
+
+.update-book>.book-info>.info .delivered:hover {
+    background-color: rgb(87, 239, 115);
+    color: black;
+}
+
+.update-book>.book-info>.info .add-inventory:hover {
+    color: rgba(255, 255, 255, 0.803);
+    /* font-weight: bold; */
+    border-radius: 5px;
+}
+
+.update-book>.book-info>.info .add-inventory {
+    background: linear-gradient(to right, rgb(181, 33, 241), rgb(220, 65, 139));
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.manage-inventory .btn {
+    background-color: rgb(102, 67, 247);
+}
