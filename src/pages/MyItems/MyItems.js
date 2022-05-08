@@ -5,6 +5,7 @@ import Books from '../../Components/Books/Books';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import './MyItems.css';
+import { confirmAlert } from 'react-confirm-alert';
 const MyItems = () => {
     const defaultValue = 5;
     const [user] = useAuthState(auth);
@@ -26,7 +27,7 @@ const MyItems = () => {
         setPages(Math.ceil(totalBooks / size));
     }, [size, totalBooks]);
 
-    const deleteBook = (id) => {
+    const deleTe = (id) => {
         fetch(`http://localhost:5000/book/${id}`, {
             method: 'DELETE',
         }).then(res => res.json()).then(data => {
@@ -38,6 +39,21 @@ const MyItems = () => {
                 toast.success('Deleted Successfully');
             }
         })
+    }
+    const deleteBook = (id) => {
+        confirmAlert({
+            title: "Confirm to delete",
+            message: "Are you sure to delete this book?",
+            buttons: [
+                {
+                    label: "Yes",
+                    onClick: () => deleTe(id)
+                },
+                {
+                    label: "No"
+                }
+            ]
+        });
     }
 
     return (
