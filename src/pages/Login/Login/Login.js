@@ -13,10 +13,13 @@ const Login = () => {
     const navigate = useNavigate();
     if (user) {
         navigate(from, { replace: true });
-        // navigate('/');
     }
     if (loading) {
         return <Loading></Loading>
+    }
+    if (signinError?.message && loading) {
+        console.log(signinError.message);
+        setError(signinError.message);
     }
 
     const login = async (event) => {
@@ -24,9 +27,6 @@ const Login = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         await signInWithEmailAndPassword(email, password);
-        if (signinError?.message) {
-            setError(signinError.message);
-        }
     }
     return (
         <div>
@@ -41,7 +41,7 @@ const Login = () => {
 
                             {/* Submit button */}
                             <input className='btn mt-2 w-50' type="submit" value="Sign up" /> <br />
-                            {error && <p className='text-danger'>{error}</p>}
+                            {signinError?.message && <p className='text-danger'>{signinError.message}</p>}
                         </form>
                     </div>
                 </div>

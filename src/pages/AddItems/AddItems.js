@@ -11,7 +11,7 @@ const AddItems = () => {
     const [user] = useAuthState(auth);
     const location = useLocation();
     const navigate = useNavigate();
-    const from = '/';
+    const from = '/my-items';
     const formSubmit = (book) => {
         const { email } = user;
         book.email = email;
