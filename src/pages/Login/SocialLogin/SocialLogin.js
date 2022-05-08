@@ -22,7 +22,6 @@ const SocialLogin = () => {
     }
 
     if (user) {
-        // Navigating to location
         navigate(from, { replace: true });
     }
 

@@ -5,9 +5,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useLocation, useNavigate } from 'react-router-dom';
 const AddItems = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = '/';
     const formSubmit = (book) => {
         const { email } = user;
         book.email = email;
@@ -25,6 +29,7 @@ const AddItems = () => {
                     theme: "dark"
 
                 });
+                navigate(from, { replace: true })
             }
         })
     }
@@ -34,7 +39,7 @@ const AddItems = () => {
             <div className='mx-auto text-center bg-white p-5'>
                 <h2 className='pb-3 mt-0'>Enter book details</h2>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(formSubmit)}>
-                    <input placeholder='Book name' className='mb-2 rounded rounded-4 border border-1 border-success' {...register("name", { required: true, maxLength: 20 })} />
+                    <input placeholder='Book name' className='mb-2 rounded rounded-4 border border-1 border-success' {...register("name", { required: true })} />
                     <textarea placeholder='Book description' className='mb-2 rounded rounded-4 border border-1 border-success' {...register("description",)} />
                     <input placeholder='Book price' className='mb-2 rounded rounded-4 border border-1 border-success' type="number" {...register("price",)} />
                     <input placeholder='Book cover photo URL' className='mb-2 rounded rounded-4 border border-1 border-success' type="text" {...register("img",)} />

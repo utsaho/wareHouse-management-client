@@ -1,9 +1,7 @@
 import useBooks from '../../hooks/useBooks';
 import Book from './Book/Book';
 import './Books.css';
-const Books = ({ number }) => {
-    const [totalBooks] = useBooks();
-    const books = totalBooks.slice(0, number);
+const Books = ({ books }) => {
     return (
         <div className='container'>
             <div className='bookContainer'>
