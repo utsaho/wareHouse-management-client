@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Books from '../../Components/Books/Books';
 import './ManageItems.css';
 const ManageItems = () => {
+    const defaultValue = 5;
     const [pages, setPages] = useState(0);
     const [totalBooks, setTotalBooks] = useState(0);
     const [books, setBooks] = useState([]);
@@ -22,8 +23,8 @@ const ManageItems = () => {
                 {
                     [...Array(pages).keys()].map(page => <button onClick={() => setCurrentPage(page)} className={`btn ${page === currentPage ? 'selected' : ''} mx-1 fw-bold`} key={page}>{page}</button>)
                 }
-                <select onChange={(event) => setSize(event.target.value)}>
-                    <option selected value="5">5</option>
+                <select defaultChecked={defaultValue} onChange={(event) => setSize(event.target.value)}>
+                    <option value="5">5</option>
                     <option value="6">6</option>
                     <option value="10">10</option>
                 </select>
