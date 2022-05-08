@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Advice from '../../Components/Advice/Advice';
+import Banner from '../../Components/Banner/Banner';
 import Books from '../../Components/Books/Books';
 import Contact from '../../Components/Contact/Contact';
 const Home = () => {
@@ -12,7 +13,8 @@ const Home = () => {
     const navigate = useNavigate();
     return (
         <div className=' pt-5 pb-5'>
-            <p className='text-center fs-2'>Bangla Books</p>
+            <Banner></Banner>
+            <p className='text-center mt-5 fs-2'>Bangla Books</p>
             <hr className='conatiner mx-5' />
             <Books books={books} del={false}></Books>
             <div className='manage-inventory d-flex justify-content-center'>
